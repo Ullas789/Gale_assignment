@@ -14,8 +14,7 @@ DECLARE
     truncate_command STRING;
 BEGIN
     BEGIN
-      LET truncate_command := 'TRUNCATE TABLE ' || target_table || ';';
-        EXECUTE IMMEDIATE truncate_command;
+    
         LET sql_command := '
        
             INSERT INTO ' || target_table || '
